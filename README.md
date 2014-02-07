@@ -1,12 +1,15 @@
 OKAMutableDirectedGraph
 =======================
 
-A directed graph (or digraph) is a set of vertices and a collection of directed edges that each connects an ordered pair of vertices. We say that a directed edge points from the first vertex in the pair and points to the second vertex in the pair. 
-
 ![image](http://algs4.cs.princeton.edu/42directed/images/digraph.png)
 
-__Example usage for dependency management__
-_NB: See Unit tests_
+OKAMutableDirectedGraph is an implementation of a directed graph in Objective-C.
+
+OKAMutableDirectedGraph was developed originally for managing dependencies - but it can be used for path finding, sorting, garbage collection and much more. 
+
+----
+
+### Example Usage
 
     NSString *a = @"a";
     NSString *b = @"b";
@@ -35,3 +38,21 @@ _NB: See Unit tests_
     } while (graph.heads.count != 0);
     
     (lldb) sorted => @[ c, b, a ]
+
+
+----
+
+### Documentation & Research
+
+[Princeton University - Directed Graphs](http://algs4.cs.princeton.edu/42directed/)
+
+
+### Contact
+
+Oliver Atkinson  
+
++ [oliveratkinson@me.com](mailto:oliveratkinson@me.com)
+
+### Licence
+
+OKAMutableDirectedGraph is available under the MIT license. See the LICENSE file for more info.
