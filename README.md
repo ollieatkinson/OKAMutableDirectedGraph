@@ -11,34 +11,35 @@ OKAMutableDirectedGraph was developed originally for managing dependencies - but
 
 ### Example Usage
 
-    NSString *a = @"a";
-    NSString *b = @"b";
-    NSString *c = @"c";
-    
-    OKAMutableDirectedGraph *graph = [[OKAMutableDirectedGraph alloc] init];
-    
-    for (NSString *job in @[ a, b, c ]) {
-      [graph addNode:job];
-    }
-    
-    [graph addEdgeFrom:c destination:b];
-    [graph addEdgeFrom:b destination:a];
-    
-    NSMutableArray *sorted = [NSMutableArray array];
-    
-    do {
-      
-      NSArray *heads = graph.heads;
-      
-      for (NSString *job in heads) {
-        [graph removeNode:job];
-        [sorted addObject:job];
-      }
-      
-    } while (graph.heads.count != 0);
-    
-    (lldb) sorted => @[ c, b, a ]
-
+``` objective-c
+ NSString *a = @"a";
+ NSString *b = @"b";
+ NSString *c = @"c";
+ 
+ OKAMutableDirectedGraph *graph = [[OKAMutableDirectedGraph alloc] init];
+ 
+ for (NSString *job in @[ a, b, c ]) {
+   [graph addNode:job];
+ }
+ 
+ [graph addEdgeFrom:c destination:b];
+ [graph addEdgeFrom:b destination:a];
+ 
+ NSMutableArray *sorted = [NSMutableArray array];
+ 
+ do {
+   
+   NSArray *heads = graph.heads;
+   
+   for (NSString *job in heads) {
+     [graph removeNode:job];
+     [sorted addObject:job];
+   }
+   
+ } while (graph.heads.count != 0);
+ 
+ (lldb) sorted => @[ c, b, a ]
+```
 
 ----
 
