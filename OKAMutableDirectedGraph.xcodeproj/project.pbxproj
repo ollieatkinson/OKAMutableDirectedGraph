@@ -55,6 +55,7 @@
 		A79E43D518A4229400218530 /* OKADirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKADirectedGraph.h; sourceTree = "<group>"; };
 		A79E43D618A4229400218530 /* OKAMutableDirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKAMutableDirectedGraph.h; sourceTree = "<group>"; };
 		A79E43D718A4229400218530 /* OKAMutableDirectedGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKAMutableDirectedGraph.m; sourceTree = "<group>"; };
+		A7A9D55C196C7CB500DD56CD /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A777970A18A41E4400919E19 /* XCTest.framework in Frameworks */,
-				A777970D18A41E4400919E19 /* UIKit.framework in Frameworks */,
 				A777970B18A41E4400919E19 /* Foundation.framework in Frameworks */,
 				56E5836376134939A6A4154E /* libPods-OKAMutableDirectedGraphTests.a in Frameworks */,
+				A777970D18A41E4400919E19 /* UIKit.framework in Frameworks */,
+				A777970A18A41E4400919E19 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +84,12 @@
 		A77796EF18A41E4300919E19 = {
 			isa = PBXGroup;
 			children = (
+				A77796FA18A41E4300919E19 /* Frameworks */,
 				A77796FD18A41E4300919E19 /* OKAMutableDirectedGraph */,
 				A777971118A41E4400919E19 /* OKAMutableDirectedGraphTests */,
-				A77796FA18A41E4300919E19 /* Frameworks */,
 				A77796F918A41E4300919E19 /* Products */,
 				5636174E2EB4478AB65C3AF2 /* Pods-OKAMutableDirectedGraphTests.xcconfig */,
+				A7A9D55C196C7CB500DD56CD /* Warnings.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				A77796FB18A41E4300919E19 /* Foundation.framework */,
-				A777970918A41E4400919E19 /* XCTest.framework */,
-				A777970C18A41E4400919E19 /* UIKit.framework */,
 				5A8462DEFBDF4F218D60BA89 /* libPods-OKAMutableDirectedGraphTests.a */,
+				A777970C18A41E4400919E19 /* UIKit.framework */,
+				A777970918A41E4400919E19 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,10 +116,10 @@
 		A77796FD18A41E4300919E19 /* OKAMutableDirectedGraph */ = {
 			isa = PBXGroup;
 			children = (
+				A77796FE18A41E4400919E19 /* Supporting Files */,
 				A79E43D518A4229400218530 /* OKADirectedGraph.h */,
 				A79E43D618A4229400218530 /* OKAMutableDirectedGraph.h */,
 				A79E43D718A4229400218530 /* OKAMutableDirectedGraph.m */,
-				A77796FE18A41E4400919E19 /* Supporting Files */,
 			);
 			path = OKAMutableDirectedGraph;
 			sourceTree = "<group>";
@@ -133,8 +135,8 @@
 		A777971118A41E4400919E19 /* OKAMutableDirectedGraphTests */ = {
 			isa = PBXGroup;
 			children = (
-				A777971718A41E4400919E19 /* OKAMutableDirectedGraphTests.m */,
 				A777971218A41E4400919E19 /* Supporting Files */,
+				A777971718A41E4400919E19 /* OKAMutableDirectedGraphTests.m */,
 			);
 			path = OKAMutableDirectedGraphTests;
 			sourceTree = "<group>";
@@ -142,8 +144,8 @@
 		A777971218A41E4400919E19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A777971318A41E4400919E19 /* OKAMutableDirectedGraphTests-Info.plist */,
 				A777971418A41E4400919E19 /* InfoPlist.strings */,
+				A777971318A41E4400919E19 /* OKAMutableDirectedGraphTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -272,8 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A777971818A41E4400919E19 /* OKAMutableDirectedGraphTests.m in Sources */,
 				A79E43D918A4229400218530 /* OKAMutableDirectedGraph.m in Sources */,
+				A777971818A41E4400919E19 /* OKAMutableDirectedGraphTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +303,7 @@
 /* Begin XCBuildConfiguration section */
 		A777971918A41E4400919E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A9D55C196C7CB500DD56CD /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -339,6 +342,7 @@
 		};
 		A777971A18A41E4400919E19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A9D55C196C7CB500DD56CD /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -371,6 +375,7 @@
 		};
 		A777971C18A41E4400919E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A9D55C196C7CB500DD56CD /* Warnings.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/OKAMutableDirectedGraph.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -383,6 +388,7 @@
 		};
 		A777971D18A41E4400919E19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A9D55C196C7CB500DD56CD /* Warnings.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/OKAMutableDirectedGraph.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
