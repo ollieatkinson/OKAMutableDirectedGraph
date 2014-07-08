@@ -22,8 +22,8 @@ OKAMutableDirectedGraph was developed originally for managing dependencies - but
    [graph addNode:job];
  }
  
- [graph addEdgeFrom:c destination:b];
- [graph addEdgeFrom:b destination:a];
+ [graph addEdgeFrom:c to:b];
+ [graph addEdgeFrom:b to:a];
  
  NSMutableArray *sorted = [NSMutableArray array];
  

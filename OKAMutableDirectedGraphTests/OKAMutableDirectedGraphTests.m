@@ -1,7 +1,11 @@
-#import <Kiwi/Kiwi.h>
+#import <Specta/Specta.h>
+
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
+
 #import "OKAMutableDirectedGraph.h"
 
-SPEC_BEGIN(TestSpec)
+SpecBegin(TestSpec)
 
 describe(@"OKAMutableDirectedGraph#dependencies", ^{
   
@@ -17,8 +21,8 @@ describe(@"OKAMutableDirectedGraph#dependencies", ^{
       [graph addNode:job];
     }
     
-    [graph addEdgeFrom:c destination:b];
-    [graph addEdgeFrom:b destination:a];
+    [graph addEdgeFrom:c to:b];
+    [graph addEdgeFrom:b to:a];
     
     NSMutableArray *sorted = [NSMutableArray array];
     
@@ -33,10 +37,10 @@ describe(@"OKAMutableDirectedGraph#dependencies", ^{
       
     } while (graph.heads.count != 0);
     
-    [[sorted should] equal:@[ c, b, a ]];
+    expect(sorted).to.equal(@[ c, b, a ]);
     
   });
   
 });
 
-SPEC_END
+SpecEnd
