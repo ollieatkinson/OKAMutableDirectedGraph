@@ -1,4 +1,7 @@
-platform :ios, '5.1'
+platform :ios, '6.0'
+
 target :OKAMutableDirectedGraphTests, :exclusive => true do
-  pod 'Kiwi/XCTest'
+  pod 'Expecta'
+  pod 'Specta'
+  pod 'OCMockito'
 end

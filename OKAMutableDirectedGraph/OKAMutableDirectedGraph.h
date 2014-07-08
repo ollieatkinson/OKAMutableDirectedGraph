@@ -12,9 +12,9 @@
 
 @interface OKAMutableDirectedGraph : NSObject <OKADirectedGraph>
 
-- (void)addEdgeFrom:(id)start destination:(id)destination;
-- (void)removeEdgeFrom:(id)start destination:(id)destination;
-- (BOOL)containsEdgeFrom:(id)start destination:(id)destination;
+- (void)addEdgeFrom:(id)start to:(id)destination;
+- (void)removeEdgeFrom:(id)start to:(id)destination;
+- (BOOL)containsEdgeFrom:(id)start to:(id)destination;
 
 - (void)addNode:(id)node;
 - (void)removeNode:(id)node;

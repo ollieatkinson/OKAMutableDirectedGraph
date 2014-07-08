@@ -74,12 +74,12 @@
   return self.nodeToPredecessors.keyEnumerator;
 }
 
-- (void)addEdgeFrom:(id)start destination:(id)destination;
+- (void)addEdgeFrom:(id)start to:(id)destination;
 {
   NSParameterAssert(start);
   NSParameterAssert(destination);
   
-  if ([self containsEdgeFrom:start destination:destination]) {
+  if ([self containsEdgeFrom:start to:destination]) {
     return;
   }
   
@@ -114,7 +114,7 @@
   self.nodeToPredecessors[destination] = [predecessorList copy];
 }
 
-- (void)removeEdgeFrom:(id)start destination:(id)destination;
+- (void)removeEdgeFrom:(id)start to:(id)destination;
 {
   NSParameterAssert(start);
   NSParameterAssert(destination);
@@ -150,7 +150,7 @@
   self.nodeToPredecessors[destination] = predecessorList;
 }
 
-- (BOOL)containsEdgeFrom:(id)start destination:(id)destination;
+- (BOOL)containsEdgeFrom:(id)start to:(id)destination;
 {
   NSArray *successors = self.nodeToSuccessors[start];
   
@@ -192,7 +192,7 @@
     id            nextNode;
     
     while (nextNode = [enumerator nextObject]) {
-      [self removeEdgeFrom:node destination:nextNode];
+      [self removeEdgeFrom:node to:nextNode];
     }
     
     [dictionary removeObjectForKey:node];
