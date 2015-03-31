@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "5.0"
   s.osx.deployment_target = "10.7"
 
-  s.source       = { :git => "https://github.com/jkennington/OKAMutableDirectedGraph.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/ollieatkinson/OKAMutableDirectedGraph.git", :tag => "1.0.0" }
 
   s.source_files  = "OKAMutableDirectedGraph"
   s.exclude_files = "Classes/Exclude"
